@@ -1,8 +1,10 @@
 package com.mostafazaghloul.eduplane.Activities;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.mostafazaghloul.eduplane.R;
@@ -16,5 +18,9 @@ public class loginActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+    public void signup(View view) {
+        startActivity(new Intent(loginActivity.this,SignupActivity.class));
     }
 }
