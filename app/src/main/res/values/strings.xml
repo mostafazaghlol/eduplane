@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">edu plane</string>
+    <string name="Email">البريد الالكترونى</string>
+    <string name="password">كلمة المرور</string>
+    <string name="login">تسجيل الدخـول</string>
+    <string name="noAccout">ليس لديك حساب؟</string>
+    <string name="noAccout2">سجل الأن</string>
+</resources>
