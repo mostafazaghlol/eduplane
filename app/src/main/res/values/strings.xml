@@ -13,4 +13,16 @@
     <string name="home">الرئيسية</string>
     <string name="word">كورس word</string>
     <string name="pic">كورس picture</string>
+    <string name="title_activity_home2">الرئيسيه</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="account">حسابى</string>
+    <string name="courses">دوراتى</string>
+    <string name="signout">تسجيل الخروج</string>
+    <string name="Phone">رقم التليفون</string>
+    <string name="save">حفظ</string>
 </resources>
