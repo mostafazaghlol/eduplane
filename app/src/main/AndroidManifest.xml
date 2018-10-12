@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mostafazaghloul.eduplane">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_1"
@@ -32,8 +34,9 @@
             android:name=".Activities.AccountActivity"
             android:label="@string/account"
             android:parentActivityName=".Activities.HomeActivity" />
-        <activity android:name=".Activities.CoursesActivity"></activity>
-        <activity android:name=".Activities.notificationActivity"></activity>
+        <activity android:name=".Activities.CoursesActivity" />
+        <activity android:name=".Activities.notificationActivity" />
+        <activity android:name=".Activities.categoryActivity"></activity>
     </application>
 
 </manifest>

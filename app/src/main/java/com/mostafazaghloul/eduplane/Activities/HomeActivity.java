@@ -1,6 +1,8 @@
 package com.mostafazaghloul.eduplane.Activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,6 +24,8 @@ import com.mostafazaghloul.eduplane.Utils.CustomTypefaceSpan;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,11 +102,38 @@ public class HomeActivity extends AppCompatActivity
             startActivity(new Intent(HomeActivity.this,CoursesActivity.class));
 
         } else if (id == R.id.out) {
+            clearSharedPrefereance();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void clearSharedPrefereance() {
+        progressDialog = ProgressDialog.show(this, "أرجو الإنتظار",
+                "يتم تسجيل الخروج ", true);
+        final SharedPreferences sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+        progressDialog.dismiss();
+        finish();
+    }
+
+    public void categoryActivity(View view) {
+        int id = view.getId();
+        Intent intent = new Intent(HomeActivity.this,categoryActivity.class);
+        if(id == R.id.contentPicture){
+            intent.putExtra("id",0);
+        }else if(id == R.id.contentPdf){
+            intent.putExtra("id",1);
+        }else if(id == R.id.contentVideo){
+            intent.putExtra("id",2);
+        }else if(id == R.id.contentWord){
+            intent.putExtra("id",3);
+        }
+        startActivity(intent);
     }
 }

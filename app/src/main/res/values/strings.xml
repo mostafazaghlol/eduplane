@@ -2,6 +2,7 @@
     <string name="app_name">edu plane</string>
     <string name="Email">البريد الالكترونى</string>
     <string name="password">كلمة المرور</string>
+    <string name="password2">تأكـيد كلمة المرور</string>
     <string name="login">تسجيل الدخـول</string>
     <string name="noAccout">ليس لديك حساب؟</string>
     <string name="noAccout2">سجل الأن</string>
@@ -12,6 +13,8 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="home">الرئيسية</string>
     <string name="word">كورس word</string>
+    <string name="pdf">كورس pdf</string>
+    <string name="video">كورس video</string>
     <string name="pic">كورس picture</string>
     <string name="title_activity_home2">الرئيسيه</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -25,4 +28,15 @@
     <string name="signout">تسجيل الخروج</string>
     <string name="Phone">رقم التليفون</string>
     <string name="save">حفظ</string>
+    <string name="email">ادخل البريد الالكترونى !</string>
+    <string name="passworderror">ادخل كلمة المرور !</string>
+    <string name="errorInput">هذه البيانات غير صحيحه برجاء التأكد من البيانات واعادة المحاوله</string>
+    <string name="phone">رقم التليفون</string>
+    <string name="governateerror">ادخل الهيئه السعوديه !</string>
+    <string name="specialerror">ادخل التخصص !</string>
+    <string name="nameerror">ادخل الاسم !</string>
+    <string name="phoneerror">ادخل التليفون !</string>
+    <string name="errorEmail">هذا البريد الالكترونى مستخدم من قبل</string>
+    <string name="errorPhone">رقم التليفون مستخدم من قبل</string>
+    <string name="fackdata">اهلا يا صلاح</string>
 </resources>

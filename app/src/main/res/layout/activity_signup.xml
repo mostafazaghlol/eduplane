@@ -6,67 +6,91 @@
     android:layout_height="match_parent"
     android:background="@color/whilte"
     tools:context=".Activities.SignupActivity">
-    <ImageView
-        android:id="@+id/HeaderSign"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/imag" />
-
-    <ImageView
-        android:id="@+id/logoSign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/HeaderSign"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/logo" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/logoSign"
-        android:orientation="vertical"
-        android:paddingLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:paddingRight="30dp">
-
-        <EditText
-            style="@style/Ed"
-            android:layout_marginBottom="5dp"
-            android:drawableLeft="@drawable/user"
-            android:hint="@string/Name" />
-        <EditText
-            style="@style/Ed"
-            android:layout_marginBottom="5dp"
-            android:drawableLeft="@drawable/edit"
-            android:hint="@string/Special" />
-        <EditText
-            style="@style/Ed"
-            android:layout_marginBottom="5dp"
-            android:drawableLeft="@drawable/user"
-            android:hint="@string/governate" />
-
-        <EditText
-            style="@style/Ed"
-            android:layout_marginBottom="5dp"
-            android:drawableLeft="@drawable/mail"
-            android:hint="@string/Email" />
-        <!--<EditText-->
-            <!--style="@style/Ed"-->
-            <!--android:drawableLeft="@drawable/lo"-->
-            <!--android:hint="@string/password" />-->
-
-        <Button
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/buttonshape2"
-            android:text="@string/signup"
-            android:textColor="@color/whilte"
-            android:textSize="20sp" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/HeaderSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/imag" />
+
+            <ImageView
+                android:id="@+id/logoSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/HeaderSign"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/logoSign"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="30dp">
+
+                <EditText
+                    android:id="@+id/EdNameSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/user"
+                    android:hint="@string/Name" />
+                <EditText
+                    android:id="@+id/EdSpecialSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/edit"
+                    android:hint="@string/Special" />
+                <EditText
+                    android:id="@+id/EdGovernateSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/user"
+                    android:hint="@string/governate" />
+
+                <EditText
+                    android:id="@+id/EdEmailSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/mail"
+                    android:hint="@string/Email" />
+
+                <EditText
+                    android:id="@+id/EdPhoneSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/iphon"
+                    android:inputType="number"
+                    android:hint="@string/phone" />
+                <EditText
+                    android:id="@+id/EdPasswordSignup"
+                    style="@style/Ed"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/lo"
+                    android:inputType="textPassword"
+                    android:hint="@string/password" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonshape2"
+                    android:text="@string/signup"
+                    android:textColor="@color/whilte"
+                    android:textSize="20sp"
+                    android:onClick="signupFinished"/>
 
 
-    </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

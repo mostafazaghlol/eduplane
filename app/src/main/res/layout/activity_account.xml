@@ -13,12 +13,12 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:orientation="vertical">
-           <de.hdodenhof.circleimageview.CircleImageView
-               android:layout_width="120dp"
-               android:layout_height="120dp"
-               android:src="@drawable/imags"
-               android:layout_gravity="center"
-               android:layout_marginTop="20dp"/>
+           <!--<de.hdodenhof.circleimageview.CircleImageView-->
+               <!--android:layout_width="120dp"-->
+               <!--android:layout_height="120dp"-->
+               <!--android:src="@drawable/imags"-->
+               <!--android:layout_gravity="center"-->
+               <!--android:layout_marginTop="20dp"/>-->
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -26,8 +26,9 @@
                android:orientation="vertical"
                android:paddingLeft="20dp"
                android:paddingRight="20dp"
-               android:paddingTop="20dp">
+               android:paddingTop="30dp">
                <EditText
+                   android:id="@+id/nameAccount"
                    style="@style/EdWhite"
                    android:hint="@string/Name"
                    android:layout_marginBottom="10dp"
@@ -35,6 +36,7 @@
                    android:drawableTint="@color/colorPrimary"/>
 
                <EditText
+                   android:id="@+id/phoneAccount"
                    style="@style/EdWhite"
                    android:hint="@string/Phone"
                    android:layout_marginBottom="10dp"
@@ -42,6 +44,7 @@
                    android:drawableTint="@color/colorPrimary"/>
 
                <EditText
+                   android:id="@+id/emailAccount"
                    style="@style/EdWhite"
                    android:hint="@string/Email"
                    android:layout_marginBottom="10dp"
@@ -49,15 +52,19 @@
                    android:drawableTint="@color/colorPrimary"/>
 
                <EditText
+                   android:id="@+id/passwordAccount"
                    style="@style/EdWhite"
+                   android:inputType="textPassword"
                    android:hint="@string/password"
                    android:layout_marginBottom="10dp"
                    android:drawableLeft="@drawable/lo"
                    android:drawableTint="@color/colorPrimary"/>
 
                <EditText
+                   android:id="@+id/passwordAccount2"
                    style="@style/EdWhite"
                    android:hint="@string/password"
+                   android:inputType="textPassword"
                    android:layout_marginBottom="10dp"
                    android:drawableLeft="@drawable/lo"
                    android:drawableTint="@color/colorPrimary"/>
@@ -68,6 +75,7 @@
                    android:layout_marginBottom="20dp"
                    android:background="@drawable/buttonshape2"
                    android:text="@string/save"
+                   android:onClick="save"
                    android:textColor="@color/whilte"
                    android:textSize="20sp" />
            </LinearLayout>

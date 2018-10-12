@@ -27,7 +27,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/contentWord"
+                    android:onClick="categoryActivity">
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -57,7 +59,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/contentPicture"
+                    android:onClick="categoryActivity">
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -88,7 +92,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/contentPdf"
+                    android:onClick="categoryActivity">
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -99,7 +105,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/pdfHome"
-                        android:text="@string/word"
+                        android:text="@string/pdf"
                         android:textStyle="bold"
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
@@ -111,7 +117,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/contentVideo"
+                    android:onClick="categoryActivity">
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -122,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/videoHome"
-                        android:text="@string/pic"
+                        android:text="@string/video"
                         android:textStyle="bold"
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
