@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.CoursesActivity">
+    tools:context=".Activities.CoursesItemActivity">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerNotification"/>
+        android:id="@+id/recyclerCourseItem"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:id="@+id/noCourses"
-        android:text="@string/empty"
+        android:id="@+id/noCoursesItem"
+        android:text="@string/emptyItem"
         android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="bold"
         android:visibility="invisible"/>

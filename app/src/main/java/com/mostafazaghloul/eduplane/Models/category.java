@@ -3,17 +3,6 @@ package com.mostafazaghloul.eduplane.Models;
 import java.util.ArrayList;
 
 public class category {
-    /*
-    "id": 10,
-            "name": "TEST",
-            "disc": "TEST",
-            "start_at": "31-12-2018",
-            "end_at": "01-12-2019",
-            "images": [
-                "http://edu.atls.sa/public/images/courses/1539050148FOpPr.jpg",
-                "http://edu.atls.sa/public/images/courses/15390501489evyn.jpg"
-            ]
-     */
     private int id;
     private String name,disc,start_at,end_at;
     private ArrayList<String> urls;

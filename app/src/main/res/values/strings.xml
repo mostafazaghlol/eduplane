@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">edu plane</string>
-    <string name="Email">البريد الالكترونى</string>
+    <string name="Email">الايميل الوزارى</string>
     <string name="password">كلمة المرور</string>
     <string name="password2">تأكـيد كلمة المرور</string>
     <string name="login">تسجيل الدخـول</string>
@@ -8,7 +8,7 @@
     <string name="noAccout2">سجل الأن</string>
     <string name="Name">الأسـم</string>
     <string name="Special">التخصص</string>
-    <string name="governate">الهيئه السعوديـه</string>
+    <string name="governate">الهيئه التخصصات السعوديـه</string>
     <string name="signup">تسجيل</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="home">الرئيسية</string>
@@ -39,4 +39,11 @@
     <string name="errorEmail">هذا البريد الالكترونى مستخدم من قبل</string>
     <string name="errorPhone">رقم التليفون مستخدم من قبل</string>
     <string name="fackdata">اهلا يا صلاح</string>
+    <string name="coursesDetails">تفاصيل الكورس</string>
+    <string name="datecoures">مواعيد الحجـز</string>
+    <string name="startReservation">بداية حجز الكورس 15 مايو</string>
+    <string name="endReservation">نهاية حجز الكورس  20 مايو</string>
+    <string name="reservenow">حجز الأن</string>
+    <string name="empty">لم تسجل فى اى دوره حتى الان .</string>
+    <string name="emptyItem">لا يوجد دروس فى هذا الكورس</string>
 </resources>

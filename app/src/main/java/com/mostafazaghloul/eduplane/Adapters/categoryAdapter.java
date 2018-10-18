@@ -1,16 +1,21 @@
 package com.mostafazaghloul.eduplane.Adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.mostafazaghloul.eduplane.Activities.CourseReservationActivity;
+import com.mostafazaghloul.eduplane.Activities.categoryActivity;
 import com.mostafazaghloul.eduplane.Models.category;
 import com.mostafazaghloul.eduplane.R;
 import com.squareup.picasso.Picasso;
@@ -25,11 +30,13 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
         public SliderLayout mDemoSlider;
+        public RelativeLayout relativeLayout;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.statusItemCat);
             mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
+            relativeLayout = (RelativeLayout)view.findViewById(R.id.layout);
         }
     }
 
@@ -47,7 +54,7 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         category course = categoriesList.get(position);
         holder.title.setText(course.getName());
         HashMap<String,String> url_maps = new HashMap<String, String>();
@@ -61,10 +68,19 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.MyView
                     .description("image")
                     .image(name1)
                     .setScaleType(BaseSliderView.ScaleType.CenterCrop);
-
             holder.mDemoSlider.addSlider(textSliderView);
         }
-//        Picasso.get().load(course.getUrls().get(position)).into(holder.imageView);
+
+        holder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context,CourseReservationActivity.class);
+                intent.putExtra("position",position);
+                intent.putExtra("type", categoryActivity.type);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

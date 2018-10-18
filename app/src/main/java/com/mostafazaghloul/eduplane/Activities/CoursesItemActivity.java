@@ -2,9 +2,9 @@ package com.mostafazaghloul.eduplane.Activities;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,8 +17,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.mostafazaghloul.eduplane.Adapters.courseAdapter;
+import com.mostafazaghloul.eduplane.Adapters.courseItemAdapter;
+import com.mostafazaghloul.eduplane.Models.courseItem;
 import com.mostafazaghloul.eduplane.Models.courseModel;
 import com.mostafazaghloul.eduplane.R;
+import com.mostafazaghloul.eduplane.Volley.searchCourseSubject;
 import com.mostafazaghloul.eduplane.Volley.searchMyCourses;
 
 import org.json.JSONArray;
@@ -27,24 +30,25 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class CoursesActivity extends AppCompatActivity {
+public class CoursesItemActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private courseAdapter courseAdapter;
-    private ArrayList<courseModel> courseModelArrayList;
-    private int user_id,image_id;
-    private String course_id,course_name, course_time,course_type;
+    private courseItemAdapter courseAdapter;
+    private ArrayList<courseItem> courseModelArrayList;
+    private int id,course_id;
+    private String file,course_name, course_time,course_desc,updated_at;
     TextView empty;
     private ProgressDialog progressDialog;
-    private ImageView imageView;
+    public static String course_type;
+    private ImageView imageViewBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courses);
+        setContentView(R.layout.activity_coursesitem);
         initScreen();
         initRecycler();
         getId();
         prepareData();
-        imageView.setOnClickListener(new View.OnClickListener() {
+        imageViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -53,15 +57,14 @@ public class CoursesActivity extends AppCompatActivity {
     }
 
     private void getId() {
-        final SharedPreferences sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
-        user_id = sharedPreferences.getInt("id",0);
+        course_id = getIntent().getIntExtra("course_id",0);
     }
 
     private void initScreen() {
         empty = (TextView)findViewById(R.id.noCourses);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.abs_layout_courses);
-        imageView = findViewById(R.id.backAccountx);
+        imageViewBack = findViewById(R.id.backAccountx);
     }
 
     private void prepareData() {
@@ -80,35 +83,30 @@ public class CoursesActivity extends AppCompatActivity {
             }
         };
 
-        searchMyCourses RigsterRequest = new searchMyCourses(String.valueOf(user_id), responseListener);
-        RequestQueue queue = Volley.newRequestQueue(CoursesActivity.this);
+        searchCourseSubject RigsterRequest = new searchCourseSubject(String.valueOf(course_id), responseListener);
+        RequestQueue queue = Volley.newRequestQueue(CoursesItemActivity.this);
         queue.add(RigsterRequest);
     }
 
     private void getData(JSONArray jsonResponse) {
-        Boolean success = false;
         try{
             for(int i =0;i<jsonResponse.length();i++){
                 JSONObject object = jsonResponse.getJSONObject(i);
-                success = object.getBoolean("success");
-                if(success) {
-                    course_id = object.getString("course_id");
-                    course_name = object.getString("course_name");
-                    course_time = object.getString("star_at");
-                    course_type = object.getString("course_type");
-                    image_id = getImageID(course_type);
-                    courseModelArrayList.add(new courseModel(course_name, course_time, image_id, course_id));
-                }
-            }
-            if(!success){
-                progressDialog.dismiss();
-                empty.setVisibility(View.VISIBLE);
-                return;
+                id = object.getInt("id");
+                course_name = object.getString("name");
+                course_type = object.getString("type");
+                course_desc = object.getString("disc");
+                course_time = object.getString("created_at");
+                updated_at = object.getString("updated_at");
+                file = object.getString("file");
+                courseModelArrayList.add(new courseItem(id,course_id,course_name,course_type,course_desc,file,course_time,updated_at));
             }
             progressDialog.dismiss();
             courseAdapter.notifyDataSetChanged();
         }catch (JSONException e){
             e.printStackTrace();
+            empty.setVisibility(View.VISIBLE);
+            progressDialog.dismiss();
         }
     }
 
@@ -127,8 +125,8 @@ public class CoursesActivity extends AppCompatActivity {
 
     private void initRecycler() {
         courseModelArrayList = new ArrayList();
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerNotification);
-        courseAdapter = new courseAdapter(courseModelArrayList);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerCourseItem);
+        courseAdapter = new courseItemAdapter(courseModelArrayList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvTitleCat"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,14 +14,14 @@
         android:layout_centerInParent="true"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:text="@string/courses"/>
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/noftion"
-        android:layout_toRightOf="@id/backAccount"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"/>
+        android:text="sad"/>
+    <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:src="@drawable/noftion"-->
+        <!--android:layout_toRightOf="@id/backAccount"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="10dp"/>-->
     <ImageView
         android:layout_width="40dp"
         android:layout_height="25dp"
@@ -29,5 +29,5 @@
         android:rotation="180"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
-        android:id="@+id/backAccount"/>
+        android:id="@+id/backAccountCat"/>
 </RelativeLayout>

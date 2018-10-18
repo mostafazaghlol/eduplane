@@ -1,12 +1,13 @@
 package com.mostafazaghloul.eduplane.Models;
 
 public class courseModel {
-    private String courseTitle,courseTime;
+    private String courseTitle,courseTime,courseId;
     private int courseImage;
-    public courseModel(String courseTitle,String courseTime,int courseImage){
+    public courseModel(String courseTitle,String courseTime,int courseImage,String courseId){
         this.courseTitle = courseTitle;
         this.courseTime = courseTime;
         this.courseImage = courseImage;
+        this.courseId = courseId;
     }
 
     public int getCourseImage() {
@@ -19,5 +20,9 @@ public class courseModel {
 
     public String getCourseTitle() {
         return courseTitle;
+    }
+
+    public String getCourseId() {
+        return courseId;
     }
 }

@@ -1,12 +1,20 @@
 package com.mostafazaghloul.eduplane.Activities;
 
 import android.app.ProgressDialog;
+import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -33,20 +41,40 @@ import java.util.HashMap;
 public class categoryActivity extends AppCompatActivity  {
     private RecyclerView recyclerView;
     private categoryAdapter categoryAdapter;
-    private ArrayList<category> categoryModelArrayList;
+    public static ArrayList<category> categoryModelArrayList;
     private ProgressDialog progressDialog;
     private int idOfActivity;
+    public static String type;
+    private TextView TxType;
+    private ImageView BtBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+        initScreen();
         getIdOfActivity();
         initRecycler();
         getDataFromInternet();
+        BtBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+                finish();
+            }
+        });
+    }
+
+    private void initScreen() {
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.abs_layout_category);
+        TxType = findViewById(R.id.tvTitleCat);
+        BtBack = findViewById(R.id.backAccountCat);
+        TxType.setText(getIntent().getStringExtra("type"));
     }
 
     private void getIdOfActivity() {
         idOfActivity = getIntent().getIntExtra("id",0);
+        type = getIntent().getStringExtra("type");
     }
 
     private void getDataFromInternet() {

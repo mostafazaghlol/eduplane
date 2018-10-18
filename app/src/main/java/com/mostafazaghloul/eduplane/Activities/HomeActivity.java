@@ -127,12 +127,16 @@ public class HomeActivity extends AppCompatActivity
         Intent intent = new Intent(HomeActivity.this,categoryActivity.class);
         if(id == R.id.contentPicture){
             intent.putExtra("id",0);
+            intent.putExtra("type","picture");
         }else if(id == R.id.contentPdf){
             intent.putExtra("id",1);
+            intent.putExtra("type","pdf");
         }else if(id == R.id.contentVideo){
             intent.putExtra("id",2);
+            intent.putExtra("type","video");
         }else if(id == R.id.contentWord){
             intent.putExtra("id",3);
+            intent.putExtra("type","word");
         }
         startActivity(intent);
     }

@@ -36,7 +36,10 @@
             android:parentActivityName=".Activities.HomeActivity" />
         <activity android:name=".Activities.CoursesActivity" />
         <activity android:name=".Activities.notificationActivity" />
-        <activity android:name=".Activities.categoryActivity"></activity>
+        <activity android:name=".Activities.categoryActivity" />
+        <activity android:name=".Activities.CourseReservationActivity"></activity>
+        <activity android:name=".Activities.CoursesItemActivity"></activity>
+        <activity android:name=".Activities.ShowingContent"></activity>
     </application>
 
 </manifest>

@@ -42,9 +42,11 @@ public class loginActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ButterKnife.bind(this);
         if(checkDataSharedPre()){
-            openHome();
+            openHome2();
         }
     }
+
+
 
     public void signup(View view) {
         startActivity(new Intent(loginActivity.this,SignupActivity.class));
@@ -140,6 +142,9 @@ public class loginActivity extends AppCompatActivity {
 
     private void openHome() {
         progressDialog.dismiss();
+        startActivity(new Intent(loginActivity.this,HomeActivity.class));
+    }
+    private void openHome2() {
         startActivity(new Intent(loginActivity.this,HomeActivity.class));
     }
 }

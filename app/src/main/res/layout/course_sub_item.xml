@@ -3,34 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/courselayout"
+    android:id="@+id/courseItemlayout"
     xmlns:custom="http://schemas.android.com/apk/res-auto">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/face"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/fackperson" />
-
     <TextView
-        android:id="@+id/courseTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/courseItemTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@id/face"
-        android:layout_toRightOf="@id/courseTime"
+        android:layout_toRightOf="@id/courseItemTime"
         android:gravity="right"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="5dp"
         android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="bold"
-        tools:text="hi there " />
+        tools:text="المقدمه" />
+    <TextView
+        android:id="@+id/courseItemdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseItemTitle"
+        android:gravity="right"
+        android:padding="5dp"
+        android:layout_toRightOf="@id/courseItemTime"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="5dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        tools:text="تتكلم المقدمه عن اننا فى خطر " />
 
     <TextView
-        android:id="@+id/courseTime"
+        android:id="@+id/courseItemTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_margin="10dp"
+    android:id="@+id/layout"
     xmlns:custom="http://schemas.android.com/apk/res-auto">
     <!--<ImageView-->
         <!--android:layout_width="match_parent"-->
@@ -54,11 +55,11 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:text="@string/fackdata"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:background="@color/colorPrimary"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:id="@+id/statusItemCat"
-        android:gravity="right" />
+        android:gravity="right|center" />
 
 </RelativeLayout>
