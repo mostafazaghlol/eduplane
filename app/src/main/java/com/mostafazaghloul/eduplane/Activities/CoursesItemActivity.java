@@ -117,6 +117,7 @@ public class CoursesItemActivity extends AppCompatActivity {
             return  R.drawable.pdf;
         }else if(course_type == "word"){
             return  R.drawable.word;
+            
         }else {
             return  R.drawable.pictur;
         }
