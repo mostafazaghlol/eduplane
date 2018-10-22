@@ -7,12 +7,28 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Activities.HomeActivity"
     tools:showIn="@layout/app_bar_home2">
-        <ImageView
+        <LinearLayout
             android:id="@+id/logoHome"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/fackimage" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/fackimage">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logos"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adv"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/whilte"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -28,12 +44,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:id="@+id/contentWord"
                     android:onClick="categoryActivity">
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/word"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:src="@drawable/icon1"
+                        android:scaleType="centerCrop"
                         android:id="@+id/wordHome"
                         android:layout_centerInParent="true"/>
 
@@ -48,7 +67,7 @@
                         android:layout_below="@id/wordHome"
                         android:text="@string/word"
                         android:textStyle="bold"
-
+                        android:layout_marginTop="8dp"
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
                 </RelativeLayout>
@@ -60,12 +79,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:id="@+id/contentPicture"
                     android:onClick="categoryActivity">
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/pictur"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon4"
                         android:id="@+id/picHome"
                         android:layout_centerInParent="true"/>
                     <View
@@ -79,6 +101,8 @@
                         android:layout_below="@id/picHome"
                         android:text="@string/pic"
                         android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
                 </RelativeLayout>
@@ -93,12 +117,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:id="@+id/contentPdf"
                     android:onClick="categoryActivity">
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:src="@drawable/icon2"
+                        android:scaleType="centerCrop"
                         android:id="@+id/pdfHome"
                         android:layout_centerInParent="true"/>
                     <TextView
@@ -107,6 +134,8 @@
                         android:layout_below="@id/pdfHome"
                         android:text="@string/pdf"
                         android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
                 </RelativeLayout>
@@ -118,12 +147,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:id="@+id/contentVideo"
                     android:onClick="categoryActivity">
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/vido"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon3"
                         android:id="@+id/videoHome"
                         android:layout_centerInParent="true"/>
                     <TextView
@@ -132,6 +164,8 @@
                         android:layout_below="@id/videoHome"
                         android:text="@string/video"
                         android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/black"/>
                 </RelativeLayout>

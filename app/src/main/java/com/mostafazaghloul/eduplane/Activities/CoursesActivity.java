@@ -113,11 +113,11 @@ public class CoursesActivity extends AppCompatActivity {
     }
 
     private int getImageID(String course_type) {
-        if(course_type == "video"){
+        if(course_type.equals("video")){
             return  R.drawable.vido;
-        }else if(course_type == "pdf"){
+        }else if(course_type.equals("pdf")){
             return  R.drawable.pdf;
-        }else if(course_type == "word"){
+        }else if(course_type.equals("word")){
             return  R.drawable.word;
         }else {
             return  R.drawable.pictur;

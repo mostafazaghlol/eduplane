@@ -12,10 +12,10 @@
     <string name="signup">تسجيل</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="home">الرئيسية</string>
-    <string name="word">كورس word</string>
-    <string name="pdf">كورس pdf</string>
-    <string name="video">كورس video</string>
-    <string name="pic">كورس picture</string>
+    <string name="word">word</string>
+    <string name="pdf">pdf</string>
+    <string name="video">video</string>
+    <string name="pic">picture</string>
     <string name="title_activity_home2">الرئيسيه</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -46,4 +46,5 @@
     <string name="reservenow">حجز الأن</string>
     <string name="empty">لم تسجل فى اى دوره حتى الان .</string>
     <string name="emptyItem">لا يوجد دروس فى هذا الكورس</string>
+    <string name="adv">Health control center at king Abdulaziz jeddah Ariport</string>
 </resources>

@@ -1,3 +1,18 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.11.2'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
 apply plugin: 'com.android.application'
 
 android {
@@ -9,6 +24,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id: "a512db22-300a-45b5-b36d-fee40870dc96",
+                                onesignal_google_project_number: "Edu Plane"]
     }
     buildTypes {
         release {
@@ -36,4 +53,9 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.3.2'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.onesignal:OneSignal:3.7.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+
 }
+apply plugin: 'com.google.gms.google-services'

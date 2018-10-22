@@ -128,6 +128,7 @@ public class SignupActivity extends AppCompatActivity {
     private void openHome() {
         progressDialog2.dismiss();
         startActivity(new Intent(SignupActivity.this,HomeActivity.class));
+        finish();
     }
 
 

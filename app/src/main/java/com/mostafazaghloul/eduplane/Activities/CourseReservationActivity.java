@@ -1,8 +1,14 @@
 package com.mostafazaghloul.eduplane.Activities;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -30,6 +36,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CourseReservationActivity extends AppCompatActivity {
+    private static final int NOTIFICATION_ID = 1000;
     @BindView(R.id.sliderDetalis)
     SliderLayout sliderLayout;
     @BindView(R.id.detailsDetalis)
@@ -98,8 +105,8 @@ public class CourseReservationActivity extends AppCompatActivity {
     public void finishReservation(View view) {
         Log.e("detalisID",String.valueOf(itemid));
         Log.e("detalisID",itemName);
-        progressDialog = ProgressDialog.show(this, "أرجو الإنتظار",
-                "يتم حجز الكورس  ", true);
+       // progressDialog = ProgressDialog.show(this, "أرجو الإنتظار",
+     //           "يتم حجز الكورس  ", true);
         // Response received from the server
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
@@ -125,16 +132,51 @@ public class CourseReservationActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(CourseReservationActivity.this);
         queue.add(loginPatiRequest);
     }
+
+    private void WaitForCourse() {
+        // Use NotificationCompat.Builder to set up our notification.
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+
+        //icon appears in device notification bar and right hand corner of notification
+        builder.setSmallIcon(R.drawable.logos);
+
+        // This intent is fired when notification is clicked
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://stacktips.com/"));
+//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+        // Set the intent that will fire when the user taps the notification.
+//        builder.setContentIntent(pendingIntent);
+
+        // Large icon appears on the left of the notification
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_1));
+
+        // Content title, which appears in large type at the top of the notification
+        builder.setContentTitle("يتم حجز الكورس");
+
+        // Content text, which appears in smaller text below the title
+        builder.setContentText("يتم حجز الكورس الان ");
+
+        // The subtext, which appears under the text on newer devices.
+        // This will show-up in the devices with Android 4.2 and above only
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        // Will display the notification in the notification bar
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+    }
+
     private void getJsonData(JSONArray jsonResponse) {
         try {
             JSONObject jsonObject = jsonResponse.getJSONObject(0);
             int flag  = jsonObject.getInt("flag");
             if(flag == 0){
-                progressDialog.dismiss();
-                Toast.makeText(this, "تم حجز الكورس مسبقا", Toast.LENGTH_SHORT).show();
+                WaitForCourse();
+//                progressDialog.dismiss();
+               // Toast.makeText(this, "تم حجز الكورس مسبقا", Toast.LENGTH_SHORT).show();
             }else{
-                progressDialog.dismiss();
-                Toast.makeText(this, "تم حجز الكورس ", Toast.LENGTH_SHORT).show();
+                WaitForCourse();
+
+//                progressDialog.dismiss();
+               // Toast.makeText(this, "تم حجز الكورس ", Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();

@@ -143,8 +143,10 @@ public class loginActivity extends AppCompatActivity {
     private void openHome() {
         progressDialog.dismiss();
         startActivity(new Intent(loginActivity.this,HomeActivity.class));
+        finish();
     }
     private void openHome2() {
         startActivity(new Intent(loginActivity.this,HomeActivity.class));
+        finish();
     }
 }

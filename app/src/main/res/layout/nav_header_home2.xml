@@ -11,4 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logos"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adv"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/whilte"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
 </LinearLayout>
