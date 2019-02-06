@@ -21,6 +21,11 @@
             android:icon="@drawable/stydy"
             android:title="@string/courses"
             android:iconTint="@color/colorPrimary"/>
+        <item
+            android:id="@+id/developer"
+            android:icon="@drawable/user"
+            android:title="@string/developer"
+            android:iconTint="@color/colorPrimary"/>
 
         <item
             android:id="@+id/out"

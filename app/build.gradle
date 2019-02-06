@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
         classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.11.2'
@@ -18,13 +18,13 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.mostafazaghloul.eduplane"
+        applicationId "com.eltamiuz.eduplane"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 8
+        versionName "8.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        manifestPlaceholders = [onesignal_app_id: "a512db22-300a-45b5-b36d-fee40870dc96",
+        manifestPlaceholders = [onesignal_app_id               : "a512db22-300a-45b5-b36d-fee40870dc96",
                                 onesignal_google_project_number: "Edu Plane"]
     }
     buildTypes {
@@ -53,9 +53,11 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.3.2'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.daimajia.slider:library:1.1.5@aar'
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.onesignal:OneSignal:3.7.0'
-    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.android.volley:volley:1.1.1'
+
+//    implementation 'com.google.firebase:firebase-core:16.0.1'
+//    implementation 'com.onesignal:OneSignal:3.7.0'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.3'
 
 }
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'

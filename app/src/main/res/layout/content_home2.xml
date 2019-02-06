@@ -24,6 +24,7 @@
                 android:text="@string/adv"
                 android:layout_centerInParent="true"
                 android:gravity="center"
+                android:id="@+id/text24"
                 android:textColor="@color/whilte"
                 android:textStyle="bold"
                 android:textSize="18sp"/>

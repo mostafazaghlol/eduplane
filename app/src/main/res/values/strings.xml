@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">edu plane</string>
-    <string name="Email">الايميل الوزارى</string>
+    <string name="Email">البريد الوزارى</string>
     <string name="password">كلمة المرور</string>
     <string name="password2">تأكـيد كلمة المرور</string>
     <string name="login">تسجيل الدخـول</string>
@@ -8,14 +8,14 @@
     <string name="noAccout2">سجل الأن</string>
     <string name="Name">الأسـم</string>
     <string name="Special">التخصص</string>
-    <string name="governate">الهيئه التخصصات السعوديـه</string>
+    <string name="governate">هيئة التخصصات السعوديـه</string>
     <string name="signup">تسجيل</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="home">الرئيسية</string>
-    <string name="word">word</string>
-    <string name="pdf">pdf</string>
-    <string name="video">video</string>
-    <string name="pic">picture</string>
+    <string name="word">دورات أطباء</string>
+    <string name="pdf">دورات ادارية</string>
+    <string name="video">دورات فنية</string>
+    <string name="pic">دورات أخرى</string>
     <string name="title_activity_home2">الرئيسيه</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -26,9 +26,9 @@
     <string name="account">حسابى</string>
     <string name="courses">دوراتى</string>
     <string name="signout">تسجيل الخروج</string>
-    <string name="Phone">رقم التليفون</string>
+    <string name="Phone">رقم الجوال </string>
     <string name="save">حفظ</string>
-    <string name="email">ادخل البريد الالكترونى !</string>
+    <string name="email">ادخل البريد الوزاري !</string>
     <string name="passworderror">ادخل كلمة المرور !</string>
     <string name="errorInput">هذه البيانات غير صحيحه برجاء التأكد من البيانات واعادة المحاوله</string>
     <string name="phone">رقم التليفون</string>
@@ -36,7 +36,8 @@
     <string name="specialerror">ادخل التخصص !</string>
     <string name="nameerror">ادخل الاسم !</string>
     <string name="phoneerror">ادخل التليفون !</string>
-    <string name="errorEmail">هذا البريد الالكترونى مستخدم من قبل</string>
+    <string name="Adminerror">ادخل الادارة !</string>
+    <string name="errorEmail">هذا البريد الوزاري مستخدم من قبل</string>
     <string name="errorPhone">رقم التليفون مستخدم من قبل</string>
     <string name="fackdata">اهلا يا صلاح</string>
     <string name="coursesDetails">تفاصيل الكورس</string>
@@ -45,6 +46,12 @@
     <string name="endReservation">نهاية حجز الكورس  20 مايو</string>
     <string name="reservenow">حجز الأن</string>
     <string name="empty">لم تسجل فى اى دوره حتى الان .</string>
+    <string name="empty2">لا يوجد دورات بهذا النوع .</string>
     <string name="emptyItem">لا يوجد دروس فى هذا الكورس</string>
     <string name="adv">Health control center at king Abdulaziz jeddah Ariport</string>
+    <string name="In">الادارة التي تعمل بها</string>
+    <string name="developer">المطور</string>
+    <string name="code">الكود</string>
+    <string name="codeError">ادخل الكود</string>
+    <string name="codeErrorcorrect">الكود غير صحيح</string>
 </resources>

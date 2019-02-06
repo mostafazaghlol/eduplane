@@ -63,7 +63,7 @@
                <EditText
                    android:id="@+id/passwordAccount2"
                    style="@style/EdWhite"
-                   android:hint="@string/password"
+                   android:hint="@string/password2"
                    android:inputType="textPassword"
                    android:layout_marginBottom="10dp"
                    android:drawableLeft="@drawable/lo"

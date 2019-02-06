@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mostafazaghloul.eduplane">
+    package="com.eltamiuz.eduplane">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.SplachActivity"
+            android:name="com.eltamiuz.eduplane.Activities.SplachActivity"
             android:theme="@style/AppTheme1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,25 +22,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.loginActivity"
+            android:name="com.eltamiuz.eduplane.Activities.loginActivity"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".Activities.SignupActivity"
+            android:name="com.eltamiuz.eduplane.Activities.SignupActivity"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".Activities.HomeActivity"
+            android:name="com.eltamiuz.eduplane.Activities.HomeActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.AccountActivity"
+            android:name="com.eltamiuz.eduplane.Activities.AccountActivity"
             android:label="@string/account"
-            android:parentActivityName=".Activities.HomeActivity" />
-        <activity android:name=".Activities.CoursesActivity" />
-        <activity android:name=".Activities.notificationActivity" />
-        <activity android:name=".Activities.categoryActivity" />
-        <activity android:name=".Activities.CourseReservationActivity"></activity>
-        <activity android:name=".Activities.CoursesItemActivity"></activity>
-        <activity android:name=".Activities.ShowingContent"></activity>
+            android:parentActivityName="com.eltamiuz.eduplane.Activities.HomeActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.CoursesActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.notificationActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.categoryActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.CourseReservationActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.CoursesItemActivity" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.ShowingContent" />
+        <activity android:name="com.eltamiuz.eduplane.Activities.AboutDeveloper"
+            android:label="عن المطور"
+            android:parentActivityName="com.eltamiuz.eduplane.Activities.HomeActivity"></activity>
     </application>
 
 </manifest>

@@ -12,9 +12,10 @@
         android:text="@string/adv"
         android:layout_centerInParent="true"
         android:gravity="center"
+        android:id="@+id/text"
         android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:textAppearance="?android:textAppearanceMedium"/>
+        android:padding="10dp"
+        android:textSize="18sp"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

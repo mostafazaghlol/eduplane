@@ -11,4 +11,11 @@
         android:layout_height="match_parent"
         android:id="@+id/recyclerCategory"
         android:paddingTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty2"
+        android:id="@+id/empty20"
+        android:visibility="invisible"/>
 </RelativeLayout>
