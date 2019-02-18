@@ -21,8 +21,8 @@ android {
         applicationId "com.eltamiuz.eduplane"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 8
-        versionName "8.0"
+        versionCode 9
+        versionName "9.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [onesignal_app_id               : "a512db22-300a-45b5-b36d-fee40870dc96",
                                 onesignal_google_project_number: "Edu Plane"]
